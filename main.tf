@@ -1,4 +1,5 @@
 resource "aws_instance" "demo-server" {
+  count = var.instance_count
   ami=var.os-name
   key_name=var.key
   instance_type=var.instance-type
